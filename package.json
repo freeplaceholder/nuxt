@@ -1,0 +1,60 @@
+{
+  "name": "@freeplaceholder/nuxt",
+  "version": "0.1.0",
+  "description": "Nuxt module with auto-imported components and composables for FreePlaceholder.com",
+  "license": "MIT",
+  "author": "Twenty Miles West",
+  "homepage": "https://freeplaceholder.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/freeplaceholder/nuxt.git"
+  },
+  "keywords": [
+    "placeholder",
+    "avatar",
+    "image",
+    "nuxt",
+    "nuxt-module",
+    "freeplaceholder"
+  ],
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/types.d.mts",
+        "default": "./dist/module.mjs"
+      },
+      "require": {
+        "types": "./dist/types.d.cts",
+        "default": "./dist/module.cjs"
+      }
+    }
+  },
+  "main": "./dist/module.cjs",
+  "types": "./dist/types.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "nuxt-module-build build",
+    "dev": "nuxt-module-build build --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage"
+  },
+  "dependencies": {
+    "@freeplaceholder/core": "git+https://github.com/freeplaceholder/core.git",
+    "@freeplaceholder/vue": "git+https://github.com/freeplaceholder/vue.git",
+    "@nuxt/kit": "^3.0.0"
+  },
+  "peerDependencies": {
+    "nuxt": ">=3.0.0"
+  },
+  "devDependencies": {
+    "@nuxt/module-builder": "^0.8.0",
+    "@vitest/coverage-v8": "^4.0.18",
+    "nuxt": "^3.0.0",
+    "typescript": "^5.0.0",
+    "vitest": "^4.0.18"
+  }
+}
