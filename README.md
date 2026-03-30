@@ -185,7 +185,18 @@ const url = useAvatarUrl(options);
 </script>
 ```
 
-### `placeholderUrl(options)` / `avatarUrl(options)`
+### `useSnippetUrl(options)`
+
+Returns a computed ref with an Open Graph–style snippet image URL (default 1200×630 PNG).
+
+```vue
+<script setup>
+const options = ref({ title: "Hello", subtitle: "World", cta: "Read more" });
+const og = useSnippetUrl(options);
+</script>
+```
+
+### `placeholderUrl(options)` / `avatarUrl(options)` / `snippetUrl(options)`
 
 Direct URL builder functions, also auto-imported:
 
@@ -193,6 +204,7 @@ Direct URL builder functions, also auto-imported:
 <script setup>
 const src = placeholderUrl({ width: 300, height: 200, format: "png" });
 const avatar = avatarUrl({ name: "Alice", size: 48 });
+const og = snippetUrl({ title: "Docs", format: "png" });
 </script>
 ```
 

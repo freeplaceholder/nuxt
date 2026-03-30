@@ -70,10 +70,12 @@ describe("Nuxt module", () => {
     module._setup({ baseUrl: "https://freeplaceholder.com" });
     expect(mockAddImports).toHaveBeenCalledWith(
       expect.arrayContaining([
-        expect.objectContaining({ name: "usePlaceholderUrl" }),
         expect.objectContaining({ name: "useAvatarUrl" }),
-        expect.objectContaining({ name: "placeholderUrl" }),
+        expect.objectContaining({ name: "usePlaceholderUrl" }),
+        expect.objectContaining({ name: "useSnippetUrl" }),
         expect.objectContaining({ name: "avatarUrl" }),
+        expect.objectContaining({ name: "placeholderUrl" }),
+        expect.objectContaining({ name: "snippetUrl" }),
         expect.objectContaining({ name: "configure", as: "configurePlaceholder" }),
       ]),
     );

@@ -34,10 +34,12 @@ export default defineNuxtModule<ModuleOptions>({
     });
 
     addImports([
-      { name: "usePlaceholderUrl", from: "@freeplaceholder/vue" },
       { name: "useAvatarUrl", from: "@freeplaceholder/vue" },
-      { name: "placeholderUrl", from: "@freeplaceholder/core" },
+      { name: "usePlaceholderUrl", from: "@freeplaceholder/vue" },
+      { name: "useSnippetUrl", from: "@freeplaceholder/vue" },
       { name: "avatarUrl", from: "@freeplaceholder/core" },
+      { name: "placeholderUrl", from: "@freeplaceholder/core" },
+      { name: "snippetUrl", from: "@freeplaceholder/core" },
       { name: "configure", as: "configurePlaceholder", from: "@freeplaceholder/core" },
     ]);
   },

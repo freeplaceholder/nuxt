@@ -38,6 +38,7 @@
   "scripts": {
     "build": "nuxt-module-build build",
     "dev": "nuxt-module-build build --watch",
+    "prepublishOnly": "npm run build",
     "test": "vitest run",
     "test:watch": "vitest",
     "test:coverage": "vitest run --coverage"
